@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2</title>
+</head>
+
+<body>
+    
+    <H1>Tarea 2</H1>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Edad</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody id="Tabla">
+        </tbody>
+    </table>
+
+    <Script>
+
+        var Datos = [
+                        {'Nombre':'Katty'   ,'Apellidos':'Rios Lopez'       ,'Edad':'23'    ,'Cargo':'Jefa'},
+                        {'Nombre':'Daniel'  ,'Apellidos':'Teran Argote'     ,'Edad':'21'    ,'Cargo':'Pasante'},
+                        {'Nombre':'Elmer'   ,'Apellidos':'Hinojosa Paucara' ,'Edad':'22'    ,'Cargo':'Pasante'},
+                        {'Nombre':'Viviana' ,'Apellidos':'Callisaya'        ,'Edad':'22'    ,'Cargo':'Pasante'},
+                    ]
+
+        Agregar(Datos)
+
+        function Agregar(data) 
+        {
+            var tabla = document.getElementById('Tabla')
+            
+            for (var i = 0; i < data.length; i++)
+            {
+                var Linea = `<tr>
+                                    <td>${data[i].Nombre}</td> 
+                                    <td>${data[i].Apellidos}</td>
+                                    <td>${data[i].Edad}</td>
+                                    <td>${data[i].Cargo}</td>
+                            </tr>`
+                tabla.innerHTML += Linea
+            }
+        }
+    </Script>
+</body>
+</html>
